@@ -11,5 +11,11 @@ function submitForm() {
     var uPhone = document.forms["register"]["phone"].value;
     var uAge = document.forms["register"]["age"].value;
     var uHobbies = document.forms["register"]["hobbies"].value;
+    if (uPassword !== uConfirmPassword) {
+        alert("Passwords don't match!");
+    } else {
+        window.location.replace("success.html");
+    }
+
 
 }

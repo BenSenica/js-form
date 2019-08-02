@@ -11,12 +11,16 @@ function submitForm() {
     var uPhone = document.forms["register"]["phone"].value;
     var uAge = document.forms["register"]["age"].value;
     var uHobbies = document.forms["register"]["hobbies"].value;
+    var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
     if (uPassword !== uConfirmPassword) {
         alert("Passwords don't match!");
-    } else {
+        return false;
+    } else if (uPassword.match(passw)) {
         window.location.replace("success.html");
+    } else {
+        alert("Password must contain at least 1 number and 1 uppercase!");
         return false;
     }
-
 
 }

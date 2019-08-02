@@ -15,6 +15,7 @@ function submitForm() {
         alert("Passwords don't match!");
     } else {
         window.location.replace("success.html");
+        return false;
     }
 
 

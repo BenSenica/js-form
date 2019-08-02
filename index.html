@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <form name="register" onsubmit="submitForm()">
+    <form name="register" onsubmit="return submitForm()" method="post">
         <ul>
             <li><label for="firstName">Firstname:</label></li>
             <li><input type="text" name="firstName" required></li>
